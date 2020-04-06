@@ -1,0 +1,10 @@
+<mat-icon>home</mat-icon>
+<div  >
+<input type="text" [formControl]="filter" placeholder="Filter hounds...">
+<br />
+<mat-grid-list cols="10" rowHeight="2:2">
+  <mat-grid-tile *ngFor="let gif of filteredStates$ | async">
+    <img [lazyLoad]="gif" style=" max-width: 100px; padding: 2px;">
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
